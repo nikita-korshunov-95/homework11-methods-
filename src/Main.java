@@ -26,7 +26,7 @@ public class Main {
         }
     }
 
-    public static int printInfoAboutDelivery(int distance) {
+    public static int printInfoAboutDelivery (int distance) {
         int days = 0;
         if (distance < 20) {
             days++;
