@@ -1,14 +1,16 @@
+import java.time.LocalDate;
+
 public class Main {
     public static void printInfoAboutYear(int y) {
         if (y % 4 == 0 && y % 100 != 0 || y % 400 == 0) {
-            System.out.println("Високосный год");
+            System.out.println(y + " год - високосный год");
         } else {
-            System.out.println("Невисокосный год");
+            System.out.println(y + " год - невисокосный год");
         }
     }
 
     public static void printInfoAboutVersion(int x, int z) {
-        int currentYear = 2023;
+        int currentYear = LocalDate.now().getYear();
         if (z == 0) {
             if (x < currentYear) {
                 System.out.println("Установите облегченную версию для Айфона");
@@ -24,7 +26,7 @@ public class Main {
         }
     }
 
-    public static int delivery(int distance) {
+    public static int printInfoAboutDelivery(int distance) {
         int days = 0;
         if (distance < 20) {
             days++;
@@ -60,12 +62,13 @@ public class Main {
 
     public static void task3() {
         System.out.println("Задача №3");
-        int distance = 120;
-        if (delivery (distance) == 0) {
+        int distance = 35;
+        int d = printInfoAboutDelivery(distance);
+        if (d == 0) {
             System.out.println("Доставки нет");
 
         } else {
-            System.out.println("Доставка займет дней: " + delivery(distance));
+            System.out.println("Доставка займет дней: " + d);
 
         }
     }
