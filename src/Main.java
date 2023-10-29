@@ -60,8 +60,8 @@ public class Main {
 
     public static void task3() {
         System.out.println("Задача №3");
-        int distance = 35;
-        if (delivery(distance) > 100) {
+        int distance = 120;
+        if (delivery (distance) == 0) {
             System.out.println("Доставки нет");
 
         } else {
